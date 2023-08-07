@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Resume</th>
+                <th>Hobbies</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%= new.forEach(function(new) { %>
+                <tr>
+                    <td><%= new.username %></td>
+                    <td><%= new.usermail %></td>
+                    <td><%= new.password %></td>
+                    <td><%= new.resume %></td>
+                    <td><%= new.hobbies %></td>
+                    <td><%= new.gender %></td>
+                    <td><%= new.city %></td>
+                    <td><%= new.address %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
